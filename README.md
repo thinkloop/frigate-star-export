@@ -2,15 +2,14 @@
 
 ## Overview
 
-With the 0.14 release of Frigate, a breaking change means that favorited events will be lost. 
-The release notes recommend exporting any starred/favorite events before upgrading. 
+The 0.14 release of Frigate introduces a breaking change that will result in the loss of favorited events. 
+To mitigate this, the release notes advise exporting any starred/favorite events before upgrading. 
 This script automates that process.
 
 ## How It Works
 
-The Node.js script prompts for a Frigate URL, loads all starred videos, and exports them one by one. 
-A pause based on the video’s length is applied between exports to allow time for processing. 
-Exported files will appear in your regular exports folder.
+The Node.js script prompts for a Frigate URL, loads all starred videos, and exports them one by one, pausing in between based on the video's length. 
+Exported files appear in your regular exports folder.
 
 Since Frigate’s export process is asynchronous, some errors may go unreported. 
 Monitor your logs and compare the number of exported files to the number of triggered exports to identify any missing files.
