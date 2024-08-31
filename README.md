@@ -7,14 +7,16 @@ The release notes recommend exporting any starred/favorite events before upgradi
 This script automates that process.
 
 ## How It Works
-The Node.js script loads all your starred videos and triggers an export for each one. 
-Exported files will appear in your regular exports folder. 
-To avoid system overload, a pause is applied after each export based on the video’s length.
 
-Frigate’s export process is asynchronous, so errors will go unreported. 
-Monitor your logs and compare the number of exported files to the number of triggered exports to identify any missing files. 
+The Node.js script prompts for a Frigate URL, loads all starred videos, and exports them one by one. 
+A pause based on the video’s length is applied between exports to allow time for processing. 
+Exported files will appear in your regular exports folder.
+
+Since Frigate’s export process is asynchronous, some errors may go unreported. 
+Monitor your logs and compare the number of exported files to the number of triggered exports to identify any missing files.
 
 ## Usage
+
 Clone the repository and run the main file:
 
 ```bash
@@ -24,4 +26,5 @@ node ./frigate-star-export.js
 ```
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
