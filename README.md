@@ -1,4 +1,4 @@
-# Frigate Star Export Node.js Script
+# Export Stars/Favorites in Frigate
 
 ## Overview
 
