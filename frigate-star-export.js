@@ -20,8 +20,7 @@ async function run() {
 	console.log(`
 ***************************************
 found ${listOfAllStarredVideos.length} starred videos, exporting...
-***************************************
-	`);
+***************************************`);
 
 	// loop through starred videos and trigger an export for each
 	for (i = 0; i < listOfAllStarredVideos.length; i++) {
