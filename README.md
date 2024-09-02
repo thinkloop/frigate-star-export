@@ -1,4 +1,4 @@
-# Export Stars/Favorites in Frigate
+# Export All Stars/Favorites in Frigate
 
 ## Overview
 
