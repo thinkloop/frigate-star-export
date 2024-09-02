@@ -16,7 +16,7 @@ Monitor your logs and compare the number of exported files to the number of trig
 
 ## Usage
 
-Download the file and run it:
+Download the file and run it with Node.js:
 
 ```bash
 git clone git@github.com:thinkloop/frigate-star-export.git
