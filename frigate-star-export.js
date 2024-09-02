@@ -4,12 +4,8 @@ const rl = readline.createInterface({ input: process.stdin, output: process.stdo
 run();
 async function run() {
 
-	// prompt user for base url to frigate ui 
-	const baseURL = await new Promise((resolve) => (
-		rl.question('URL to frigate (http://nas.example:5000): ', (answer) => {
-			resolve(answer);
-		}
-		)));
+	// prompt user for frigate url 
+	const baseURL = await new Promise((resolve) => (rl.question('URL to frigate (http://nas.example:5000): ', (answer) => (resolve(answer)))));
 
 	// get list of all starred videos
 	const listOfAllStarredVideos = await (async () => {
@@ -48,7 +44,7 @@ found ${listOfAllStarredVideos.length} starred videos, exporting...
 			console.info(`${i + 1}. ${video.camera} - ${formatDateTime(video.start_time, video.end_time, seconds)} [wait ${waitSeconds}s...]`);
 		}
 
-		// wait a few seconds depending on how long the video being epxorted is
+		// wait a few seconds depending on the duration of the video
 		await new Promise((resolve) => {
 			setTimeout(resolve, waitSeconds * 1000);
 		});
